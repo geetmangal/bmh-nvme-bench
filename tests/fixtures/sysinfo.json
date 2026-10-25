@@ -1,0 +1,24 @@
+{
+  "cpu": {
+    "model": "AMD EPYC 9354 32-Core Processor",
+    "cores": 4,
+    "threads": 4,
+    "sockets": 1,
+    "mhz": 3249.998,
+    "flags": ["fpu", "vme", "de", "pse", "tsc", "msr", "pae", "mce", "cx8", "apic", "sep", "mtrr", "pge", "mca", "cmov", "pat", "pse36", "clflush", "mmx", "fxsr", "sse", "sse2", "ht", "syscall", "nx", "mmxext", "fxsr_opt", "pdpe1gb", "rdtscp", "lm", "avx", "avx2", "avx512f", "aes", "hypervisor"]
+  },
+  "ram_mib": 7936,
+  "kernel": "6.8.0-45-generic",
+  "virt": "kvm",
+  "distro": "Ubuntu 24.04.1 LTS",
+  "hostname": "bmh-noida-vm-4c8g",
+  "disk": {
+    "device": "/dev/vda1",
+    "model": "",
+    "scheduler": "[none] mq-deadline",
+    "rotational": false,
+    "fstype": "ext4",
+    "mount": "/"
+  },
+  "steal_baseline_pct": 0.12
+}

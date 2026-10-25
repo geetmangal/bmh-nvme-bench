@@ -1,0 +1,166 @@
+{
+ "fio version": "fio-3.36",
+ "timestamp": 1792314000,
+ "time": "Sat Oct 25 14:30:00 2026",
+ "global options": {
+  "ioengine": "libaio",
+  "direct": "1",
+  "directory": "/root/bench-tmp",
+  "filename": "bench.file",
+  "size": "4G",
+  "time_based": "1",
+  "runtime": "60",
+  "group_reporting": "1"
+ },
+ "jobs": [
+  {
+   "jobname": "4k-randread-lat-qd1",
+   "groupid": 0,
+   "error": 0,
+   "eta": 0,
+   "elapsed": 63,
+   "job options": {
+    "rw": "randread",
+    "bs": "4k",
+    "iodepth": "1",
+    "numjobs": "1"
+   },
+   "read": {
+    "io_bytes": 1216962560,
+    "io_kbytes": 1188440,
+    "bw_bytes": 20282744,
+    "bw": 19807,
+    "iops": 4951.84,
+    "runtime": 60001,
+    "total_ios": 297110,
+    "short_ios": 0,
+    "drop_ios": 0,
+    "slat_ns": {
+     "min": 1200,
+     "max": 150000,
+     "mean": 2500.0,
+     "stddev": 900.0,
+     "N": 297110
+    },
+    "clat_ns": {
+     "min": 82160,
+     "max": 3348800,
+     "mean": 221832.0,
+     "stddev": 61620.0,
+     "N": 297110,
+     "percentile": {
+      "1.000000": 92430,
+      "50.000000": 205400,
+      "90.000000": 308100,
+      "95.000000": 291200,
+      "99.000000": 377000,
+      "99.900000": 837200,
+      "99.990000": 1841840
+     }
+    },
+    "lat_ns": {
+     "min": 84214,
+     "max": 3357172,
+     "mean": 224332.0,
+     "stddev": 61620.0,
+     "N": 297110,
+     "percentile": {
+      "1.000000": 94930,
+      "50.000000": 207900,
+      "90.000000": 310600,
+      "95.000000": 293700,
+      "99.000000": 379500,
+      "99.900000": 839700,
+      "99.990000": 1844340
+     }
+    }
+   },
+   "write": {
+    "io_bytes": 0,
+    "io_kbytes": 0,
+    "bw_bytes": 0,
+    "bw": 0,
+    "iops": 0.0,
+    "runtime": 0,
+    "total_ios": 0,
+    "short_ios": 0,
+    "drop_ios": 0,
+    "slat_ns": {
+     "min": 0,
+     "max": 0,
+     "mean": 0.0,
+     "stddev": 0.0,
+     "N": 0
+    },
+    "clat_ns": {
+     "min": 0,
+     "max": 0,
+     "mean": 0.0,
+     "stddev": 0.0,
+     "N": 0
+    },
+    "lat_ns": {
+     "min": 0,
+     "max": 0,
+     "mean": 0.0,
+     "stddev": 0.0,
+     "N": 0
+    }
+   },
+   "trim": {
+    "io_bytes": 0,
+    "io_kbytes": 0,
+    "bw_bytes": 0,
+    "bw": 0,
+    "iops": 0.0,
+    "runtime": 0,
+    "total_ios": 0,
+    "short_ios": 0,
+    "drop_ios": 0,
+    "slat_ns": {
+     "min": 0,
+     "max": 0,
+     "mean": 0.0,
+     "stddev": 0.0,
+     "N": 0
+    },
+    "clat_ns": {
+     "min": 0,
+     "max": 0,
+     "mean": 0.0,
+     "stddev": 0.0,
+     "N": 0
+    },
+    "lat_ns": {
+     "min": 0,
+     "max": 0,
+     "mean": 0.0,
+     "stddev": 0.0,
+     "N": 0
+    }
+   },
+   "job_runtime": 60000,
+   "usr_cpu": 2.1,
+   "sys_cpu": 9.3,
+   "ctx": 100000,
+   "majf": 0,
+   "minf": 30,
+   "sync": {
+    "total_ios": 0,
+    "lat_ns": {
+     "min": 0,
+     "max": 0,
+     "mean": 0.0,
+     "stddev": 0.0,
+     "N": 0
+    }
+   }
+  }
+ ],
+ "disk_util": [
+  {
+   "name": "vda",
+   "util": 99.5
+  }
+ ]
+}

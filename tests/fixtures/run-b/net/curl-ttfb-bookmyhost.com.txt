@@ -1,0 +1,5 @@
+https://bookmyhost.com/ ttfb=0.149180 connect=0.004512 tls=0.021340 http=200
+https://bookmyhost.com/ ttfb=0.130532 connect=0.004512 tls=0.021340 http=200
+https://bookmyhost.com/ ttfb=0.134528 connect=0.004512 tls=0.021340 http=200
+https://bookmyhost.com/ ttfb=0.139856 connect=0.004512 tls=0.021340 http=200
+https://bookmyhost.com/ ttfb=0.129200 connect=0.004512 tls=0.021340 http=200

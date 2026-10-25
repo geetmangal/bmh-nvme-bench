@@ -1,0 +1,19 @@
+; sequential read / write, BS=64k|1M
+[global]
+ioengine=libaio
+direct=1
+directory=${TARGET}
+filename=bench.file
+size=${SIZE}
+randrepeat=0
+norandommap=1
+group_reporting=1
+time_based=1
+runtime=${RUNTIME}
+ramp_time=2
+[${JOBNAME}]
+rw=${RW}
+bs=${BS}
+iodepth=${IODEPTH}
+numjobs=${NUMJOBS}
+offset_increment=5%

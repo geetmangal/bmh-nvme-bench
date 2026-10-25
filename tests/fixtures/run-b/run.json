@@ -1,0 +1,28 @@
+{
+  "bench_version": "0.1.0",
+  "profile": "standard",
+  "label": "competitor-x-vm-4c8g",
+  "provider": "competitor-x",
+  "plan_price_inr": 1299,
+  "size": "4G",
+  "runtime_s": 60,
+  "target": "/root/bench-tmp",
+  "repeats": 1,
+  "numjobs_rand": 4,
+  "numjobs_seq": 2,
+  "qd_seq": 16,
+  "probe_secs": 60,
+  "started_ist": "2026-10-25T14:30:00+0530",
+  "started_utc": "2026-10-25T09:00:00Z",
+  "finished_ist": "2026-10-25T14:58:12+0530",
+  "finished_utc": "2026-10-25T09:28:12Z",
+  "hostname": "vm-competitor-x",
+  "skip": [],
+  "iperf_server": "10.12.200.9",
+  "dry_run": false,
+  "tools": {
+    "fio": "fio-3.36",
+    "sysbench": "sysbench 1.0.20",
+    "iperf3": "iperf 3.16"
+  }
+}

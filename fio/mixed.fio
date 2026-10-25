@@ -1,0 +1,19 @@
+; mixed random read/write, RWMIXREAD=70 for the classic OLTP-ish 70/30
+[global]
+ioengine=libaio
+direct=1
+directory=${TARGET}
+filename=bench.file
+size=${SIZE}
+randrepeat=0
+norandommap=1
+group_reporting=1
+time_based=1
+runtime=${RUNTIME}
+ramp_time=2
+[${JOBNAME}]
+rw=randrw
+rwmixread=${RWMIXREAD}
+bs=${BS}
+iodepth=${IODEPTH}
+numjobs=${NUMJOBS}

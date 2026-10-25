@@ -1,0 +1,13 @@
+; writes the whole test file once with real data (no fallocate holes, no thin-provisioning cheats)
+[global]
+ioengine=libaio
+direct=1
+directory=${TARGET}
+filename=bench.file
+size=${SIZE}
+refill_buffers=1
+[prefill]
+rw=write
+bs=1M
+iodepth=16
+numjobs=1
