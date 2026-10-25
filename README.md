@@ -50,6 +50,7 @@ python3 report.py results/my-vps-4c8g-20261025-143000/          # summary.json/.
 python3 report.py results/<run>/ --blog                           # also fills docs/blog-post-template.md
 python3 report.py results/<run>/ --json-only
 python3 report.py compare results/a/ results/b/ --labels "BookMyHost,Other" --out compare/
+python3 report.py median results/run1/ results/run2/ results/run3/ --out results/median   # median across repeated runs
 ```
 
 `compare` writes `compare.md`, `compare.html`, `compare.svg` and `compare.json`. Run bench.sh with `--plan-price-inr` and the comparison adds INR per 10k IOPS. The JSON schema is in [docs/schema.md](docs/schema.md). Exit codes: 0 ok, 1 usage, 2 no data, 3 parse error.
@@ -90,4 +91,4 @@ MIT, see [LICENSE](LICENSE). Copyright 2026 Blazing Bullet Pvt Ltd.
 
 ---
 
-Maintained by BookMyHost engineering. Results from our Noida/Chennai NVMe nodes are published at https://bookmyhost.com/blog
+Maintained by BookMyHost engineering. Results from our Noida/Chennai NVMe nodes are published at https://bookmyhost.com

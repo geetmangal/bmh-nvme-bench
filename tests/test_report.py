@@ -230,6 +230,23 @@ class CompareTests(unittest.TestCase):
             self.assertTrue(svg.startswith("<?xml"))
             self.assertIn("<rect", svg)
 
+    def test_median_across_runs(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = os.path.join(tmp, "med")
+            rc = report.main(["median", self.run_a, self.run_b, self.run_a, "--out", out, "--quiet"])
+            self.assertEqual(rc, 0)
+            for f in ("median.json", "median.md", "median.html", "median.csv", "runs-compare.md"):
+                self.assertTrue(os.path.getsize(os.path.join(out, f)) > 0, f)
+            m = json.load(open(os.path.join(out, "median.json")))
+            a = report.build_summary(self.run_a)
+            # two of three runs are run_a, so the median equals run_a
+            self.assertEqual(m["disk"]["4k-randread-qd32"]["iops"], a["disk"]["4k-randread-qd32"]["iops"])
+            self.assertEqual(m["run"]["repeats"], 3)
+            self.assertEqual(len(m["run"]["median_of_runs"]), 3)
+            cmp_out = os.path.join(tmp, "cmp")
+            self.assertEqual(report.main(["compare", out, self.run_b, "--out", cmp_out, "--quiet"]), 0)
+        self.assertEqual(report.main(["median", self.run_a, "--out", "x", "--quiet"]), 1)
+
     def test_compare_label_mismatch(self):
         self.assertEqual(report.main(["compare", self.run_a, self.run_b, "--labels", "only-one", "--quiet"]), 1)
 

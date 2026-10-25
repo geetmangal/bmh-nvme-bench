@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # bmh-nvme-bench — reproducible NVMe / CPU / memory / network benchmark orchestrator.
-# Maintained by BookMyHost engineering (https://bookmyhost.com/blog). MIT licence.
+# Maintained by BookMyHost engineering (https://bookmyhost.com). MIT licence.
 #
 # Usage: ./bench.sh [--profile quick|standard|full] [--target DIR] [--size 4G] [--runtime 60]
 #                   [--label NAME] [--provider NAME] [--plan-price-inr N] [--skip cpu,mem,net,disk]

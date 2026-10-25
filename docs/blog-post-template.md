@@ -55,4 +55,4 @@ Methodology and caveats: https://github.com/geetmangal/bmh-nvme-bench/blob/main/
 
 ---
 
-*Benchmarked by BookMyHost engineering. More results from our Noida and Chennai NVMe nodes: https://bookmyhost.com/blog*
+*Benchmarked by BookMyHost engineering. More results from our Noida and Chennai NVMe nodes: https://bookmyhost.com*
