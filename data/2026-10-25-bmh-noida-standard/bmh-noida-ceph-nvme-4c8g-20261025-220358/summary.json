@@ -1,0 +1,755 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-25T16:49:03Z",
+  "generated_ist": "2026-10-25T22:19:03+0530",
+  "run_dir": "bmh-noida-ceph-nvme-4c8g-20261025-220358",
+  "run": {
+    "bench_version": "0.1.0",
+    "profile": "standard",
+    "label": "bmh-noida-ceph-nvme-4c8g",
+    "provider": "BookMyHost",
+    "plan_price_inr": null,
+    "size": "4G",
+    "runtime_s": 60,
+    "target": "/home/bench/bench-tmp",
+    "repeats": 1,
+    "numjobs_rand": 4,
+    "numjobs_seq": 2,
+    "qd_seq": 16,
+    "probe_secs": 60,
+    "started_ist": "2026-10-25T22:03:58+0530",
+    "started_utc": "2026-10-25T16:33:58Z",
+    "finished_ist": "2026-10-25T22:17:57+0530",
+    "finished_utc": "2026-10-25T16:47:57Z",
+    "hostname": "bmh-bench-tmp-a-20261025",
+    "skip": [],
+    "iperf_server": "160.22.109.60",
+    "dry_run": false,
+    "tools": {
+      "fio": "fio-3.36",
+      "sysbench": "sysbench 1.0.20",
+      "iperf3": "iperf 3.16 (cJSON 1.7.15)"
+    }
+  },
+  "system": {
+    "cpu": {
+      "model": "Intel Xeon Processor (Cascadelake)",
+      "cores": 4,
+      "threads": 4,
+      "sockets": 1,
+      "mhz": 3092.74,
+      "flags": [
+        "fpu",
+        "vme",
+        "de",
+        "pse",
+        "tsc",
+        "msr",
+        "pae",
+        "mce",
+        "cx8",
+        "apic",
+        "sep",
+        "mtrr",
+        "pge",
+        "mca",
+        "cmov",
+        "pat",
+        "pse36",
+        "clflush",
+        "mmx",
+        "fxsr",
+        "sse",
+        "sse2",
+        "ss",
+        "ht",
+        "syscall",
+        "nx",
+        "pdpe1gb",
+        "rdtscp",
+        "lm",
+        "constant_tsc",
+        "rep_good",
+        "nopl",
+        "xtopology",
+        "cpuid",
+        "tsc_known_freq",
+        "pni",
+        "pclmulqdq",
+        "vmx",
+        "ssse3",
+        "fma",
+        "cx16",
+        "pcid",
+        "sse4_1",
+        "sse4_2",
+        "x2apic",
+        "movbe",
+        "popcnt",
+        "tsc_deadline_timer",
+        "aes",
+        "xsave",
+        "avx",
+        "f16c",
+        "rdrand",
+        "hypervisor",
+        "lahf_lm",
+        "abm",
+        "3dnowprefetch",
+        "cpuid_fault",
+        "ssbd",
+        "ibrs",
+        "ibpb",
+        "stibp",
+        "ibrs_enhanced",
+        "tpr_shadow",
+        "flexpriority",
+        "ept",
+        "vpid",
+        "ept_ad",
+        "fsgsbase",
+        "tsc_adjust",
+        "bmi1",
+        "avx2",
+        "smep",
+        "bmi2",
+        "erms",
+        "invpcid",
+        "mpx",
+        "avx512f",
+        "avx512dq",
+        "rdseed",
+        "adx",
+        "smap",
+        "clflushopt",
+        "clwb",
+        "avx512cd",
+        "avx512bw",
+        "avx512vl",
+        "xsaveopt",
+        "xsavec",
+        "xgetbv1",
+        "xsaves",
+        "arat",
+        "vnmi",
+        "umip",
+        "pku",
+        "ospke",
+        "avx512_vnni",
+        "md_clear",
+        "flush_l1d",
+        "arch_capabilities"
+      ]
+    },
+    "ram_mib": 7941,
+    "kernel": "6.8.0-138-generic",
+    "virt": "kvm",
+    "distro": "Ubuntu 24.04.4 LTS",
+    "hostname": "bmh-bench-tmp-a-20261025",
+    "disk": {
+      "device": "/dev/vda1",
+      "model": "unknown",
+      "scheduler": "[none] mq-deadline ",
+      "rotational": true,
+      "fstype": "ext4",
+      "mount": "/"
+    },
+    "steal_baseline_pct": 0.0
+  },
+  "disk": {
+    "1m-seqread": {
+      "name": "1m-seqread",
+      "repeats": 1,
+      "primary": "read",
+      "options": {
+        "rw": "read",
+        "bs": "1M",
+        "iodepth": "16",
+        "numjobs": "2",
+        "runtime": "60",
+        "size": "4G"
+      },
+      "jobs": 1,
+      "read": {
+        "iops": 3839.1,
+        "bw_mbps": 4026.1,
+        "lat_us": {
+          "mean": 8297.3,
+          "p50": 7372.8,
+          "p99": 21364.7,
+          "p999": 27918.3
+        }
+      },
+      "iops": 3839.1,
+      "bw_mbps": 4026.1,
+      "p50_us": 7372.8,
+      "p99_us": 21364.7,
+      "p999_us": 27918.3,
+      "mean_us": 8297.3
+    },
+    "1m-seqwrite": {
+      "name": "1m-seqwrite",
+      "repeats": 1,
+      "primary": "write",
+      "options": {
+        "rw": "write",
+        "bs": "1M",
+        "iodepth": "16",
+        "numjobs": "2",
+        "runtime": "60",
+        "size": "4G"
+      },
+      "jobs": 1,
+      "write": {
+        "iops": 1737.2,
+        "bw_mbps": 1822.1,
+        "lat_us": {
+          "mean": 18278.2,
+          "p50": 17956.9,
+          "p99": 35389.4,
+          "p999": 52690.9
+        }
+      },
+      "iops": 1737.2,
+      "bw_mbps": 1822.1,
+      "p50_us": 17956.9,
+      "p99_us": 35389.4,
+      "p999_us": 52690.9,
+      "mean_us": 18278.2
+    },
+    "4k-fsync-write": {
+      "name": "4k-fsync-write",
+      "repeats": 1,
+      "primary": "write",
+      "options": {
+        "rw": "write",
+        "bs": "4k",
+        "iodepth": "1",
+        "numjobs": "1",
+        "fsync": "1",
+        "runtime": "60",
+        "size": "4G"
+      },
+      "jobs": 1,
+      "write": {
+        "iops": 226.3,
+        "bw_mbps": 0.9,
+        "lat_us": {
+          "mean": 1478.9,
+          "p50": 1351.7,
+          "p99": 3063.8,
+          "p999": 17170.4
+        }
+      },
+      "sync": {
+        "lat_us": {
+          "mean": 4393.6,
+          "p50": 4177.9,
+          "p99": 7962.6,
+          "p999": 25559.0
+        }
+      },
+      "iops": 226.3,
+      "bw_mbps": 0.9,
+      "p50_us": 4177.9,
+      "p99_us": 7962.6,
+      "p999_us": 25559.0,
+      "mean_us": 4393.6
+    },
+    "4k-randread-lat-qd1": {
+      "name": "4k-randread-lat-qd1",
+      "repeats": 1,
+      "primary": "read",
+      "options": {
+        "rw": "randread",
+        "bs": "4k",
+        "iodepth": "1",
+        "numjobs": "1",
+        "runtime": "60",
+        "size": "4G"
+      },
+      "jobs": 1,
+      "read": {
+        "iops": 1097.1,
+        "bw_mbps": 4.5,
+        "lat_us": {
+          "mean": 909.8,
+          "p50": 864.3,
+          "p99": 1663.0,
+          "p999": 4292.6
+        }
+      },
+      "iops": 1097.1,
+      "bw_mbps": 4.5,
+      "p50_us": 864.3,
+      "p99_us": 1663.0,
+      "p999_us": 4292.6,
+      "mean_us": 909.8
+    },
+    "4k-randread-qd1": {
+      "name": "4k-randread-qd1",
+      "repeats": 1,
+      "primary": "read",
+      "options": {
+        "rw": "randread",
+        "bs": "4k",
+        "iodepth": "1",
+        "numjobs": "1",
+        "runtime": "60",
+        "size": "4G"
+      },
+      "jobs": 1,
+      "read": {
+        "iops": 933.7,
+        "bw_mbps": 3.8,
+        "lat_us": {
+          "mean": 1054.8,
+          "p50": 1003.5,
+          "p99": 1826.8,
+          "p999": 2932.7
+        }
+      },
+      "iops": 933.7,
+      "bw_mbps": 3.8,
+      "p50_us": 1003.5,
+      "p99_us": 1826.8,
+      "p999_us": 2932.7,
+      "mean_us": 1054.8
+    },
+    "4k-randread-qd32": {
+      "name": "4k-randread-qd32",
+      "repeats": 1,
+      "primary": "read",
+      "options": {
+        "rw": "randread",
+        "bs": "4k",
+        "iodepth": "32",
+        "numjobs": "4",
+        "runtime": "60",
+        "size": "4G"
+      },
+      "jobs": 1,
+      "read": {
+        "iops": 82186.4,
+        "bw_mbps": 336.6,
+        "lat_us": {
+          "mean": 1552.2,
+          "p50": 1450.0,
+          "p99": 3883.0,
+          "p999": 12517.4
+        }
+      },
+      "iops": 82186.4,
+      "bw_mbps": 336.6,
+      "p50_us": 1450.0,
+      "p99_us": 3883.0,
+      "p999_us": 12517.4,
+      "mean_us": 1552.2
+    },
+    "4k-randrw70-qd32": {
+      "name": "4k-randrw70-qd32",
+      "repeats": 1,
+      "primary": "read",
+      "options": {
+        "rw": "randrw",
+        "bs": "4k",
+        "iodepth": "32",
+        "numjobs": "4",
+        "rwmixread": "70",
+        "runtime": "60",
+        "size": "4G"
+      },
+      "jobs": 1,
+      "read": {
+        "iops": 28584.7,
+        "bw_mbps": 117.1,
+        "lat_us": {
+          "mean": 2490.6,
+          "p50": 1712.1,
+          "p99": 15138.8,
+          "p999": 38535.2
+        }
+      },
+      "write": {
+        "iops": 12222.3,
+        "bw_mbps": 50.1,
+        "lat_us": {
+          "mean": 4626.9,
+          "p50": 3751.9,
+          "p99": 19267.6,
+          "p999": 44826.6
+        }
+      },
+      "iops": 40807.0,
+      "bw_mbps": 167.2,
+      "p50_us": 1712.1,
+      "p99_us": 15138.8,
+      "p999_us": 38535.2,
+      "mean_us": 2490.6
+    },
+    "4k-randwrite-qd1": {
+      "name": "4k-randwrite-qd1",
+      "repeats": 1,
+      "primary": "write",
+      "options": {
+        "rw": "randwrite",
+        "bs": "4k",
+        "iodepth": "1",
+        "numjobs": "1",
+        "runtime": "60",
+        "size": "4G"
+      },
+      "jobs": 1,
+      "write": {
+        "iops": 443.3,
+        "bw_mbps": 1.8,
+        "lat_us": {
+          "mean": 2231.5,
+          "p50": 1974.3,
+          "p99": 10813.4,
+          "p999": 17432.6
+        }
+      },
+      "iops": 443.3,
+      "bw_mbps": 1.8,
+      "p50_us": 1974.3,
+      "p99_us": 10813.4,
+      "p999_us": 17432.6,
+      "mean_us": 2231.5
+    },
+    "4k-randwrite-qd32": {
+      "name": "4k-randwrite-qd32",
+      "repeats": 1,
+      "primary": "write",
+      "options": {
+        "rw": "randwrite",
+        "bs": "4k",
+        "iodepth": "32",
+        "numjobs": "4",
+        "runtime": "60",
+        "size": "4G"
+      },
+      "jobs": 1,
+      "write": {
+        "iops": 19560.7,
+        "bw_mbps": 80.1,
+        "lat_us": {
+          "mean": 6536.2,
+          "p50": 3817.5,
+          "p99": 43778.0,
+          "p999": 63701.0
+        }
+      },
+      "iops": 19560.7,
+      "bw_mbps": 80.1,
+      "p50_us": 3817.5,
+      "p99_us": 43778.0,
+      "p999_us": 63701.0,
+      "mean_us": 6536.2
+    },
+    "64k-seqread": {
+      "name": "64k-seqread",
+      "repeats": 1,
+      "primary": "read",
+      "options": {
+        "rw": "read",
+        "bs": "64k",
+        "iodepth": "16",
+        "numjobs": "2",
+        "runtime": "60",
+        "size": "4G"
+      },
+      "jobs": 1,
+      "read": {
+        "iops": 21537.7,
+        "bw_mbps": 1411.5,
+        "lat_us": {
+          "mean": 1478.4,
+          "p50": 1171.5,
+          "p99": 5472.3,
+          "p999": 8847.4
+        }
+      },
+      "iops": 21537.7,
+      "bw_mbps": 1411.5,
+      "p50_us": 1171.5,
+      "p99_us": 5472.3,
+      "p999_us": 8847.4,
+      "mean_us": 1478.4
+    },
+    "64k-seqwrite": {
+      "name": "64k-seqwrite",
+      "repeats": 1,
+      "primary": "write",
+      "options": {
+        "rw": "write",
+        "bs": "64k",
+        "iodepth": "16",
+        "numjobs": "2",
+        "runtime": "60",
+        "size": "4G"
+      },
+      "jobs": 1,
+      "write": {
+        "iops": 8030.0,
+        "bw_mbps": 526.3,
+        "lat_us": {
+          "mean": 3972.7,
+          "p50": 4014.1,
+          "p99": 7897.1,
+          "p999": 13041.7
+        }
+      },
+      "iops": 8030.0,
+      "bw_mbps": 526.3,
+      "p50_us": 4014.1,
+      "p99_us": 7897.1,
+      "p999_us": 13041.7,
+      "mean_us": 3972.7
+    }
+  },
+  "cpu": {
+    "single_thread": {
+      "events_per_second": 514.91,
+      "threads": 1,
+      "events": 5150,
+      "lat_p95_ms": 1.96
+    },
+    "all_threads": {
+      "events_per_second": 2042.64,
+      "threads": 4,
+      "events": 20433,
+      "lat_p95_ms": 2.03
+    },
+    "scaling": 3.97
+  },
+  "memory": {
+    "read": {
+      "mib_per_sec": 25601.72,
+      "ops_per_sec": 25601.72,
+      "block_kib": 1024
+    },
+    "write": {
+      "mib_per_sec": 22422.58,
+      "ops_per_sec": 22422.58,
+      "block_kib": 1024
+    }
+  },
+  "network": {
+    "iperf3": {
+      "upload": {
+        "sent_mbps": 197.6,
+        "received_mbps": 191.1,
+        "retransmits": 557,
+        "streams": 4,
+        "duration_s": 10.0,
+        "reverse": false,
+        "mbps": 191.1
+      },
+      "download": {
+        "sent_mbps": 197.3,
+        "received_mbps": 190.9,
+        "retransmits": 325,
+        "streams": 4,
+        "duration_s": 10.0,
+        "reverse": true,
+        "mbps": 190.9
+      }
+    },
+    "ping": {
+      "1.1.1.1": {
+        "sent": 20,
+        "received": 20,
+        "loss_pct": 0.0,
+        "min_ms": 2.628,
+        "avg_ms": 3.179,
+        "max_ms": 4.207,
+        "mdev_ms": 0.331,
+        "host": "1.1.1.1",
+        "ip": "1.1.1.1"
+      },
+      "160.22.109.60": {
+        "sent": 20,
+        "received": 20,
+        "loss_pct": 0.0,
+        "min_ms": 0.131,
+        "avg_ms": 0.217,
+        "max_ms": 0.395,
+        "mdev_ms": 0.072,
+        "host": "160.22.109.60",
+        "ip": "160.22.109.60"
+      }
+    },
+    "ttfb": {
+      "bookmyhost.com": {
+        "samples": 5,
+        "ttfb_ms_min": 69.4,
+        "ttfb_ms_median": 73.4,
+        "http_codes": [
+          "200"
+        ]
+      },
+      "www.google.com": {
+        "samples": 5,
+        "ttfb_ms_min": 133.0,
+        "ttfb_ms_median": 138.3,
+        "http_codes": [
+          "200"
+        ]
+      }
+    }
+  },
+  "probe": {
+    "steal": {
+      "samples": 60,
+      "avg_pct": 0.0,
+      "max_pct": 0.0,
+      "p95_pct": 0.0
+    },
+    "latency_samples": [
+      {
+        "file": "lat-01.json",
+        "p50_us": 708.6,
+        "p99_us": 1368.1,
+        "iops": 1318.5
+      },
+      {
+        "file": "lat-02.json",
+        "p50_us": 790.5,
+        "p99_us": 1499.1,
+        "iops": 1225.4
+      },
+      {
+        "file": "lat-03.json",
+        "p50_us": 757.8,
+        "p99_us": 2146.3,
+        "iops": 1028.4
+      },
+      {
+        "file": "lat-04.json",
+        "p50_us": 667.6,
+        "p99_us": 1548.3,
+        "iops": 1361.9
+      },
+      {
+        "file": "lat-05.json",
+        "p50_us": 725.0,
+        "p99_us": 4292.6,
+        "iops": 1058.8
+      },
+      {
+        "file": "lat-06.json",
+        "p50_us": 806.9,
+        "p99_us": 1548.3,
+        "iops": 1191.8
+      }
+    ],
+    "latency_p99_us_min": 1368.1,
+    "latency_p99_us_max": 4292.6,
+    "latency_p99_spread_x": 3.14
+  },
+  "extras": {
+    "pyloop_mops": 6.49,
+    "openssl_aes256gcm_16k_mbps": 4262.7
+  },
+  "headline": [
+    {
+      "metric": "4k random read IOPS (QD1)",
+      "value": 933.7,
+      "unit": "IOPS",
+      "test": "4k-randread-qd1",
+      "key": "iops"
+    },
+    {
+      "metric": "4k random read IOPS (QD32)",
+      "value": 82186.4,
+      "unit": "IOPS",
+      "test": "4k-randread-qd32",
+      "key": "iops"
+    },
+    {
+      "metric": "4k random write IOPS (QD32)",
+      "value": 19560.7,
+      "unit": "IOPS",
+      "test": "4k-randwrite-qd32",
+      "key": "iops"
+    },
+    {
+      "metric": "1M sequential read MB/s",
+      "value": 4026.1,
+      "unit": "MB/s",
+      "test": "1m-seqread",
+      "key": "bw_mbps"
+    },
+    {
+      "metric": "1M sequential write MB/s",
+      "value": 1822.1,
+      "unit": "MB/s",
+      "test": "1m-seqwrite",
+      "key": "bw_mbps"
+    },
+    {
+      "metric": "4k read latency p99 (us, QD1)",
+      "value": 1663.0,
+      "unit": "us",
+      "test": "4k-randread-lat-qd1",
+      "key": "p99_us"
+    },
+    {
+      "metric": "4k fsync write latency p99 (us)",
+      "value": 7962.6,
+      "unit": "us",
+      "test": "4k-fsync-write",
+      "key": "p99_us"
+    },
+    {
+      "metric": "sysbench CPU events/s (1 thread)",
+      "value": 514.91,
+      "unit": "events/s",
+      "test": "cpu",
+      "key": "single_thread"
+    },
+    {
+      "metric": "sysbench CPU events/s (4 threads)",
+      "value": 2042.64,
+      "unit": "events/s",
+      "test": "cpu",
+      "key": "all_threads"
+    },
+    {
+      "metric": "Memory read MiB/s (1 thread)",
+      "value": 25601.72,
+      "unit": "MiB/s",
+      "test": "mem",
+      "key": "read"
+    },
+    {
+      "metric": "Memory write MiB/s (1 thread)",
+      "value": 22422.58,
+      "unit": "MiB/s",
+      "test": "mem",
+      "key": "write"
+    },
+    {
+      "metric": "iperf3 download Mbit/s",
+      "value": 190.9,
+      "unit": "Mbit/s",
+      "test": "net",
+      "key": "download"
+    },
+    {
+      "metric": "iperf3 upload Mbit/s",
+      "value": 191.1,
+      "unit": "Mbit/s",
+      "test": "net",
+      "key": "upload"
+    },
+    {
+      "metric": "CPU steal avg % (probe)",
+      "value": 0.0,
+      "unit": "%",
+      "test": "probe",
+      "key": "steal"
+    }
+  ]
+}

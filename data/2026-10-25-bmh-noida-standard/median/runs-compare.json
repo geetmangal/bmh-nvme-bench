@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "generated_ist": "2026-10-25T22:19:03+0530",
+  "labels": [
+    "run 1",
+    "run 2",
+    "run 3"
+  ],
+  "runs": [
+    {
+      "label": "run 1",
+      "run_dir": "bmh-noida-ceph-nvme-4c8g-20261025-213545",
+      "provider": "BookMyHost",
+      "profile": "standard",
+      "cpu": "Intel Xeon Processor (Cascadelake)",
+      "vcpus": 4,
+      "ram_mib": 7941
+    },
+    {
+      "label": "run 2",
+      "run_dir": "bmh-noida-ceph-nvme-4c8g-20261025-214955",
+      "provider": "BookMyHost",
+      "profile": "standard",
+      "cpu": "Intel Xeon Processor (Cascadelake)",
+      "vcpus": 4,
+      "ram_mib": 7941
+    },
+    {
+      "label": "run 3",
+      "run_dir": "bmh-noida-ceph-nvme-4c8g-20261025-220358",
+      "provider": "BookMyHost",
+      "profile": "standard",
+      "cpu": "Intel Xeon Processor (Cascadelake)",
+      "vcpus": 4,
+      "ram_mib": 7941
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "4k randread IOPS QD1",
+      "test": "4k-randread-qd1",
+      "key": "iops",
+      "higher_is_better": true,
+      "values": [
+        896.0,
+        938.5,
+        933.7
+      ],
+      "x_vs_first": [
+        1.0,
+        1.05,
+        1.04
+      ],
+      "best_index": 1
+    },
+    {
+      "metric": "4k randread IOPS QD32",
+      "test": "4k-randread-qd32",
+      "key": "iops",
+      "higher_is_better": true,
+      "values": [
+        80088.2,
+        77403.2,
+        82186.4
+      ],
+      "x_vs_first": [
+        1.0,
+        0.97,
+        1.03
+      ],
+      "best_index": 2
+    },
+    {
+      "metric": "4k randwrite IOPS QD32",
+      "test": "4k-randwrite-qd32",
+      "key": "iops",
+      "higher_is_better": true,
+      "values": [
+        20667.0,
+        19838.9,
+        19560.7
+      ],
+      "x_vs_first": [
+        1.0,
+        0.96,
+        0.95
+      ],
+      "best_index": 0
+    },
+    {
+      "metric": "4k randrw 70/30 IOPS QD32",
+      "test": "4k-randrw70-qd32",
+      "key": "iops",
+      "higher_is_better": true,
+      "values": [
+        42417.1,
+        41406.5,
+        40807.0
+      ],
+      "x_vs_first": [
+        1.0,
+        0.98,
+        0.96
+      ],
+      "best_index": 0
+    },
+    {
+      "metric": "1M seq read MB/s",
+      "test": "1m-seqread",
+      "key": "bw_mbps",
+      "higher_is_better": true,
+      "values": [
+        3992.0,
+        4072.8,
+        4026.1
+      ],
+      "x_vs_first": [
+        1.0,
+        1.02,
+        1.01
+      ],
+      "best_index": 1
+    },
+    {
+      "metric": "1M seq write MB/s",
+      "test": "1m-seqwrite",
+      "key": "bw_mbps",
+      "higher_is_better": true,
+      "values": [
+        1715.2,
+        2002.3,
+        1822.1
+      ],
+      "x_vs_first": [
+        1.0,
+        1.17,
+        1.06
+      ],
+      "best_index": 1
+    },
+    {
+      "metric": "4k read p99 us QD1",
+      "test": "4k-randread-lat-qd1",
+      "key": "p99_us",
+      "higher_is_better": false,
+      "values": [
+        1810.4,
+        1876.0,
+        1663.0
+      ],
+      "x_vs_first": [
+        1.0,
+        0.97,
+        1.09
+      ],
+      "best_index": 2
+    },
+    {
+      "metric": "fsync write p99 us",
+      "test": "4k-fsync-write",
+      "key": "p99_us",
+      "higher_is_better": false,
+      "values": [
+        8224.8,
+        8355.8,
+        7962.6
+      ],
+      "x_vs_first": [
+        1.0,
+        0.98,
+        1.03
+      ],
+      "best_index": 2
+    },
+    {
+      "metric": "sysbench CPU 1T events/s",
+      "test": "cpu",
+      "key": "single_thread",
+      "higher_is_better": true,
+      "values": [
+        514.1,
+        517.54,
+        514.91
+      ],
+      "x_vs_first": [
+        1.0,
+        1.01,
+        1.0
+      ],
+      "best_index": 1
+    },
+    {
+      "metric": "sysbench CPU all-T events/s",
+      "test": "cpu",
+      "key": "all_threads",
+      "higher_is_better": true,
+      "values": [
+        2058.6,
+        2051.29,
+        2042.64
+      ],
+      "x_vs_first": [
+        1.0,
+        1.0,
+        0.99
+      ],
+      "best_index": 0
+    },
+    {
+      "metric": "memory read MiB/s",
+      "test": "mem",
+      "key": "read",
+      "higher_is_better": true,
+      "values": [
+        24168.04,
+        25190.43,
+        25601.72
+      ],
+      "x_vs_first": [
+        1.0,
+        1.04,
+        1.06
+      ],
+      "best_index": 2
+    },
+    {
+      "metric": "iperf3 download Mbit/s",
+      "test": "net",
+      "key": "download",
+      "higher_is_better": true,
+      "values": [
+        191.0,
+        190.9,
+        190.9
+      ],
+      "x_vs_first": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "best_index": 0
+    },
+    {
+      "metric": "CPU steal avg %",
+      "test": "probe",
+      "key": "steal",
+      "higher_is_better": false,
+      "values": [
+        0.0,
+        0.004,
+        0.0
+      ],
+      "x_vs_first": [
+        null,
+        null,
+        null
+      ],
+      "best_index": 0
+    }
+  ],
+  "value_for_money": [
+    {
+      "plan_price_inr": null,
+      "inr_per_10k_read_iops": null,
+      "inr_per_10k_write_iops": null
+    },
+    {
+      "plan_price_inr": null,
+      "inr_per_10k_read_iops": null,
+      "inr_per_10k_write_iops": null
+    },
+    {
+      "plan_price_inr": null,
+      "inr_per_10k_read_iops": null,
+      "inr_per_10k_write_iops": null
+    }
+  ]
+}

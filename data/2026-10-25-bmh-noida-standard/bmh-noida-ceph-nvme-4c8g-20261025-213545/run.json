@@ -1,0 +1,28 @@
+{
+  "bench_version": "0.1.0",
+  "profile": "standard",
+  "label": "bmh-noida-ceph-nvme-4c8g",
+  "provider": "BookMyHost",
+  "plan_price_inr": null,
+  "size": "4G",
+  "runtime_s": 60,
+  "target": "/home/bench/bench-tmp",
+  "repeats": 1,
+  "numjobs_rand": 4,
+  "numjobs_seq": 2,
+  "qd_seq": 16,
+  "probe_secs": 60,
+  "started_ist": "2026-10-25T21:35:45+0530",
+  "started_utc": "2026-10-25T16:05:45Z",
+  "finished_ist": "2026-10-25T21:49:55+0530",
+  "finished_utc": "2026-10-25T16:19:55Z",
+  "hostname": "bmh-bench-tmp-a-20261025",
+  "skip": [],
+  "iperf_server": "160.22.109.60",
+  "dry_run": false,
+  "tools": {
+    "fio": "fio-3.36",
+    "sysbench": "sysbench 1.0.20",
+    "iperf3": "iperf 3.16 (cJSON 1.7.15)"
+  }
+}

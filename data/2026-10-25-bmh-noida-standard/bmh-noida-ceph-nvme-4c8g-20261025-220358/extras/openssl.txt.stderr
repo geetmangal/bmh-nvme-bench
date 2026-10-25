@@ -1,0 +1,6 @@
+Doing AES-256-GCM for 3s on 16 size blocks: 79790521 AES-256-GCM's in 3.00s
+Doing AES-256-GCM for 3s on 64 size blocks: 52089904 AES-256-GCM's in 2.99s
+Doing AES-256-GCM for 3s on 256 size blocks: 25684548 AES-256-GCM's in 3.00s
+Doing AES-256-GCM for 3s on 1024 size blocks: 10091208 AES-256-GCM's in 3.00s
+Doing AES-256-GCM for 3s on 8192 size blocks: 1535316 AES-256-GCM's in 2.99s
+Doing AES-256-GCM for 3s on 16384 size blocks: 780527 AES-256-GCM's in 3.00s

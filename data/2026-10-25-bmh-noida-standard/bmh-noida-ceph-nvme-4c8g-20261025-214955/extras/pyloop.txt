@@ -1,0 +1,1 @@
+pyloop_seconds=1.526 score=6.55 Mops/s
