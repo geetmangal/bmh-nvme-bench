@@ -1,0 +1,123 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>bmh-noida-ceph-nvme-4c8g - bmh-nvme-bench</title><style>
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#1b1f23;background:#fff;line-height:1.45}
+h1,h2,h3{line-height:1.2}h1{border-bottom:2px solid #0b5fff;padding-bottom:.3rem}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.92rem}th,td{border:1px solid #d9dee3;padding:.4rem .6rem;text-align:left}
+th{background:#f3f6fa}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}code{background:#f3f6fa;padding:.1rem .3rem;border-radius:3px}
+pre{background:#f3f6fa;padding:.8rem;overflow:auto}.chart{margin:1rem 0}.muted{color:#5b6670}footer{margin:2rem 0;color:#5b6670;font-size:.85rem}
+.bar{fill:#0b5fff}.bar.alt{fill:#f28c28}.bar.c2{fill:#2bb673}.bar.c3{fill:#9b59b6}.lbl{font-size:12px;fill:#1b1f23}.val{font-size:12px;fill:#1b1f23;font-weight:600}
+@media (prefers-color-scheme:dark){body{background:#0f1419;color:#e6edf3}th{background:#1c2430}th,td{border-color:#2d3845}code,pre{background:#1c2430}.lbl,.val{fill:#e6edf3}}
+</style></head><body>
+<h1>Benchmark results: bmh-noida-ceph-nvme-4c8g</h1>
+<p class='muted'>Profile <code>quick</code>, fio file 1G, 15 s per job. Started 2026-10-25T20:48:18+0530 IST on <code>bmh-bench-tmp-20261025</code>, provider <b>BookMyHost</b>.</p>
+<h2>Headline numbers</h2><table><thead><tr><th class="">Metric</th><th class="num">Value</th><th class="num">Unit</th></tr></thead><tbody><tr><td class="">4k random read IOPS (QD1)</td><td class="num">892.4</td><td class="num">IOPS</td></tr><tr><td class="">4k random read IOPS (QD32)</td><td class="num">53,109</td><td class="num">IOPS</td></tr><tr><td class="">4k random write IOPS (QD32)</td><td class="num">13,956</td><td class="num">IOPS</td></tr><tr><td class="">1M sequential read MB/s</td><td class="num">2,093</td><td class="num">MB/s</td></tr><tr><td class="">1M sequential write MB/s</td><td class="num">862.5</td><td class="num">MB/s</td></tr><tr><td class="">4k read latency p99 (us, QD1)</td><td class="num">1,827</td><td class="num">us</td></tr><tr><td class="">4k fsync write latency p99 (us)</td><td class="num">8,454</td><td class="num">us</td></tr><tr><td class="">sysbench CPU events/s (1 thread)</td><td class="num">513.6</td><td class="num">events/s</td></tr><tr><td class="">sysbench CPU events/s (4 threads)</td><td class="num">2,059</td><td class="num">events/s</td></tr><tr><td class="">Memory read MiB/s (1 thread)</td><td class="num">23,530</td><td class="num">MiB/s</td></tr><tr><td class="">Memory write MiB/s (1 thread)</td><td class="num">22,428</td><td class="num">MiB/s</td></tr><tr><td class="">CPU steal avg % (probe)</td><td class="num">0.01</td><td class="num">%</td></tr></tbody></table>
+<h2>Disk (fio)</h2>
+<svg class="chart" xmlns="http://www.w3.org/2000/svg" width="720" height="250" viewBox="0 0 720 250" role="img" aria-label="IOPS by test">
+<text x="0" y="16" class="val">IOPS by test <tspan class="lbl">(IOPS)</tspan></text>
+<text x="0" y="43.0" class="lbl">4k-randread-qd1</text>
+<rect class="bar" x="240" y="30" width="6.6" height="16" rx="2"><title>4k-randread-qd1: 892.4 IOPS</title></rect>
+<text x="252.6" y="43" class="val">892.4</text>
+<text x="0" y="73.0" class="lbl">4k-randread-qd32</text>
+<rect class="bar" x="240" y="60" width="390.0" height="16" rx="2"><title>4k-randread-qd32: 53,109 IOPS</title></rect>
+<text x="636.0" y="73" class="val">53,109</text>
+<text x="0" y="103.0" class="lbl">4k-randwrite-qd1</text>
+<rect class="bar" x="240" y="90" width="4.0" height="16" rx="2"><title>4k-randwrite-qd1: 545.8 IOPS</title></rect>
+<text x="250.0" y="103" class="val">545.8</text>
+<text x="0" y="133.0" class="lbl">4k-randwrite-qd32</text>
+<rect class="bar" x="240" y="120" width="102.5" height="16" rx="2"><title>4k-randwrite-qd32: 13,956 IOPS</title></rect>
+<text x="348.5" y="133" class="val">13,956</text>
+<text x="0" y="163.0" class="lbl">4k-randrw70-qd32</text>
+<rect class="bar" x="240" y="150" width="200.8" height="16" rx="2"><title>4k-randrw70-qd32: 27,350 IOPS</title></rect>
+<text x="446.8" y="163" class="val">27,350</text>
+<text x="0" y="193.0" class="lbl">4k-randread-lat-qd1</text>
+<rect class="bar" x="240" y="180" width="6.8" height="16" rx="2"><title>4k-randread-lat-qd1: 926.9 IOPS</title></rect>
+<text x="252.8" y="193" class="val">926.9</text>
+<text x="0" y="223.0" class="lbl">4k-fsync-write</text>
+<rect class="bar" x="240" y="210" width="1.3" height="16" rx="2"><title>4k-fsync-write: 176.8 IOPS</title></rect>
+<text x="247.3" y="223" class="val">176.8</text>
+</svg>
+<svg class="chart" xmlns="http://www.w3.org/2000/svg" width="720" height="160" viewBox="0 0 720 160" role="img" aria-label="Bandwidth by test">
+<text x="0" y="16" class="val">Bandwidth by test <tspan class="lbl">(MB/s)</tspan></text>
+<text x="0" y="43.0" class="lbl">64k-seqread</text>
+<rect class="bar" x="240" y="30" width="124.6" height="16" rx="2"><title>64k-seqread: 668.5 MB/s</title></rect>
+<text x="370.6" y="43" class="val">668.5</text>
+<text x="0" y="73.0" class="lbl">64k-seqwrite</text>
+<rect class="bar" x="240" y="60" width="32.6" height="16" rx="2"><title>64k-seqwrite: 174.9 MB/s</title></rect>
+<text x="278.6" y="73" class="val">174.9</text>
+<text x="0" y="103.0" class="lbl">1m-seqread</text>
+<rect class="bar" x="240" y="90" width="390.0" height="16" rx="2"><title>1m-seqread: 2,093 MB/s</title></rect>
+<text x="636.0" y="103" class="val">2,093</text>
+<text x="0" y="133.0" class="lbl">1m-seqwrite</text>
+<rect class="bar" x="240" y="120" width="160.7" height="16" rx="2"><title>1m-seqwrite: 862.5 MB/s</title></rect>
+<text x="406.7" y="133" class="val">862.5</text>
+</svg>
+<svg class="chart" xmlns="http://www.w3.org/2000/svg" width="720" height="304" viewBox="0 0 720 304" role="img" aria-label="Latency p50 / p99 / p99.9">
+<text x="0" y="16" class="val">Latency p50 / p99 / p99.9 <tspan class="lbl">(us)</tspan></text>
+<text x="0" y="61.0" class="lbl">4k-randread-qd1</text>
+<rect class="bar" x="240" y="30" width="12.9" height="16" rx="2"><title>4k-randread-qd1: 1,057 us</title></rect>
+<text x="258.9" y="43" class="val">1,057</text>
+<rect class="bar alt" x="240" y="48" width="22.8" height="16" rx="2"><title>4k-randread-qd1: 1,860 us</title></rect>
+<text x="268.8" y="61" class="val">1,860</text>
+<rect class="bar c2" x="240" y="66" width="50.0" height="16" rx="2"><title>4k-randread-qd1: 4,080 us</title></rect>
+<text x="296.0" y="79" class="val">4,080</text>
+<text x="0" y="127.0" class="lbl">4k-randwrite-qd1</text>
+<rect class="bar" x="240" y="96" width="22.2" height="16" rx="2"><title>4k-randwrite-qd1: 1,810 us</title></rect>
+<text x="268.2" y="109" class="val">1,810</text>
+<rect class="bar alt" x="240" y="114" width="39.5" height="16" rx="2"><title>4k-randwrite-qd1: 3,228 us</title></rect>
+<text x="285.5" y="127" class="val">3,228</text>
+<rect class="bar c2" x="240" y="132" width="58.2" height="16" rx="2"><title>4k-randwrite-qd1: 4,751 us</title></rect>
+<text x="304.2" y="145" class="val">4,751</text>
+<text x="0" y="193.0" class="lbl">4k-randread-lat-qd1</text>
+<rect class="bar" x="240" y="162" width="12.5" height="16" rx="2"><title>4k-randread-lat-qd1: 1,020 us</title></rect>
+<text x="258.5" y="175" class="val">1,020</text>
+<rect class="bar alt" x="240" y="180" width="22.4" height="16" rx="2"><title>4k-randread-lat-qd1: 1,827 us</title></rect>
+<text x="268.4" y="193" class="val">1,827</text>
+<rect class="bar c2" x="240" y="198" width="47.1" height="16" rx="2"><title>4k-randread-lat-qd1: 3,850 us</title></rect>
+<text x="293.1" y="211" class="val">3,850</text>
+<text x="0" y="259.0" class="lbl">4k-fsync-write</text>
+<rect class="bar" x="240" y="228" width="69.4" height="16" rx="2"><title>4k-fsync-write: 5,669 us</title></rect>
+<text x="315.4" y="241" class="val">5,669</text>
+<rect class="bar alt" x="240" y="246" width="103.5" height="16" rx="2"><title>4k-fsync-write: 8,454 us</title></rect>
+<text x="349.5" y="259" class="val">8,454</text>
+<rect class="bar c2" x="240" y="264" width="390.0" height="16" rx="2"><title>4k-fsync-write: 31,850 us</title></rect>
+<text x="636.0" y="277" class="val">31,850</text>
+</svg>
+<table><thead><tr><th class="">Test</th><th class="">rw</th><th class="">bs</th><th class="num">QD</th><th class="num">jobs</th><th class="num">IOPS</th><th class="num">MB/s</th><th class="num">lat mean us</th><th class="num">p50 us</th><th class="num">p99 us</th><th class="num">p99.9 us</th></tr></thead><tbody><tr><td class="">4k-randread-qd1</td><td class="">randread</td><td class="">4k</td><td class="num">1</td><td class="num">1</td><td class="num">892</td><td class="num">3.7</td><td class="num">1,105</td><td class="num">1,057</td><td class="num">1,860</td><td class="num">4,080</td></tr><tr><td class="">4k-randread-qd32</td><td class="">randread</td><td class="">4k</td><td class="num">32</td><td class="num">1</td><td class="num">53,109</td><td class="num">217.5</td><td class="num">598</td><td class="num">569</td><td class="num">1,057</td><td class="num">3,621</td></tr><tr><td class="">4k-randwrite-qd1</td><td class="">randwrite</td><td class="">4k</td><td class="num">1</td><td class="num">1</td><td class="num">546</td><td class="num">2.2</td><td class="num">1,807</td><td class="num">1,810</td><td class="num">3,228</td><td class="num">4,751</td></tr><tr><td class="">4k-randwrite-qd32</td><td class="">randwrite</td><td class="">4k</td><td class="num">32</td><td class="num">1</td><td class="num">13,956</td><td class="num">57.2</td><td class="num">2,287</td><td class="num">2,023</td><td class="num">5,603</td><td class="num">14,221</td></tr><tr><td class="">4k-randrw70-qd32</td><td class="">randrw</td><td class="">4k</td><td class="num">32</td><td class="num">1</td><td class="num">27,350</td><td class="num">112.0</td><td class="num">864</td><td class="num">733</td><td class="num">2,736</td><td class="num">5,079</td></tr><tr><td class="">64k-seqread</td><td class="">read</td><td class="">64k</td><td class="num">8</td><td class="num">1</td><td class="num">10,200</td><td class="num">668.5</td><td class="num">777</td><td class="num">725</td><td class="num">1,499</td><td class="num">3,523</td></tr><tr><td class="">64k-seqwrite</td><td class="">write</td><td class="">64k</td><td class="num">8</td><td class="num">1</td><td class="num">2,668</td><td class="num">174.9</td><td class="num">2,986</td><td class="num">2,802</td><td class="num">6,062</td><td class="num">16,712</td></tr><tr><td class="">1m-seqread</td><td class="">read</td><td class="">1M</td><td class="num">8</td><td class="num">1</td><td class="num">1,995</td><td class="num">2,092.6</td><td class="num">3,977</td><td class="num">3,752</td><td class="num">7,635</td><td class="num">9,241</td></tr><tr><td class="">1m-seqwrite</td><td class="">write</td><td class="">1M</td><td class="num">8</td><td class="num">1</td><td class="num">822</td><td class="num">862.5</td><td class="num">9,602</td><td class="num">9,503</td><td class="num">17,695</td><td class="num">21,365</td></tr><tr><td class="">4k-randread-lat-qd1</td><td class="">randread</td><td class="">4k</td><td class="num">1</td><td class="num">1</td><td class="num">927</td><td class="num">3.8</td><td class="num">1,077</td><td class="num">1,020</td><td class="num">1,827</td><td class="num">3,850</td></tr><tr><td class="">4k-fsync-write</td><td class="">write</td><td class="">4k</td><td class="num">1</td><td class="num">1</td><td class="num">177</td><td class="num">0.7</td><td class="num">5,628</td><td class="num">5,669</td><td class="num">8,454</td><td class="num">31,850</td></tr></tbody></table>
+<h2>CPU and memory</h2>
+<svg class="chart" xmlns="http://www.w3.org/2000/svg" width="720" height="100" viewBox="0 0 720 100" role="img" aria-label="CPU">
+<text x="0" y="16" class="val">CPU <tspan class="lbl">(events/s)</tspan></text>
+<text x="0" y="43.0" class="lbl">sysbench CPU 1 thread (events/s)</text>
+<rect class="bar" x="240" y="30" width="97.3" height="16" rx="2"><title>sysbench CPU 1 thread (events/s): 513.6 events/s</title></rect>
+<text x="343.3" y="43" class="val">513.6</text>
+<text x="0" y="73.0" class="lbl">sysbench CPU 4 threads (events/s)</text>
+<rect class="bar" x="240" y="60" width="390.0" height="16" rx="2"><title>sysbench CPU 4 threads (events/s): 2,059 events/s</title></rect>
+<text x="636.0" y="73" class="val">2,059</text>
+</svg>
+<svg class="chart" xmlns="http://www.w3.org/2000/svg" width="720" height="100" viewBox="0 0 720 100" role="img" aria-label="Memory bandwidth">
+<text x="0" y="16" class="val">Memory bandwidth <tspan class="lbl">(MiB/s)</tspan></text>
+<text x="0" y="43.0" class="lbl">memory read (MiB/s)</text>
+<rect class="bar" x="240" y="30" width="390.0" height="16" rx="2"><title>memory read (MiB/s): 23,530 MiB/s</title></rect>
+<text x="636.0" y="43" class="val">23,530</text>
+<text x="0" y="73.0" class="lbl">memory write (MiB/s)</text>
+<rect class="bar" x="240" y="60" width="371.7" height="16" rx="2"><title>memory write (MiB/s): 22,428 MiB/s</title></rect>
+<text x="617.7" y="73" class="val">22,428</text>
+</svg>
+<h2>Network</h2>
+<table><thead><tr><th class="">Test</th><th class="num">Result</th><th class="num">Unit</th></tr></thead><tbody><tr><td class="">ping 1.1.1.1 avg</td><td class="num">3.02</td><td class="num">ms</td></tr><tr><td class="">TTFB bookmyhost.com median</td><td class="num">74</td><td class="num">ms</td></tr><tr><td class="">TTFB www.google.com median</td><td class="num">182</td><td class="num">ms</td></tr></tbody></table>
+<h2>Noisy-neighbour probe</h2><ul>
+<li>CPU steal avg 0.01 %, max 0.25 % over 20 s</li>
+<li>4k QD1 p99 spread 1.01x (1,712 - 1,728 us)</li>
+<svg class="chart" xmlns="http://www.w3.org/2000/svg" width="720" height="100" viewBox="0 0 720 100" role="img" aria-label="p99 latency per probe sample">
+<text x="0" y="16" class="val">p99 latency per probe sample <tspan class="lbl">(us)</tspan></text>
+<text x="0" y="43.0" class="lbl">lat-01.json</text>
+<rect class="bar" x="240" y="30" width="390.0" height="16" rx="2"><title>lat-01.json: 1,728 us</title></rect>
+<text x="636.0" y="43" class="val">1,728</text>
+<text x="0" y="73.0" class="lbl">lat-02.json</text>
+<rect class="bar" x="240" y="60" width="386.3" height="16" rx="2"><title>lat-02.json: 1,712 us</title></rect>
+<text x="632.3" y="73" class="val">1,712</text>
+</svg>
+</ul>
+<h2>System</h2><table><thead><tr><th class="">Fact</th><th class="">Value</th></tr></thead><tbody><tr><td class="">CPU</td><td class="">Intel Xeon Processor (Cascadelake) (4c/4t)</td></tr><tr><td class="">RAM</td><td class="">7,941 MiB</td></tr><tr><td class="">Virt</td><td class="">kvm</td></tr><tr><td class="">Kernel</td><td class="">6.8.0-138-generic</td></tr><tr><td class="">Distro</td><td class="">Ubuntu 24.04.4 LTS</td></tr><tr><td class="">Disk</td><td class="">/dev/vda1 unknown sched=[none] mq-deadline </td></tr><tr><td class="">FS</td><td class="">ext4 on /</td></tr></tbody></table>
+<h2>Reproduce</h2><pre>git clone https://github.com/geetmangal/bmh-nvme-bench &amp;&amp; cd bmh-nvme-bench
+./bench.sh --profile quick --size 1G --runtime 15 --label &quot;bmh-noida-ceph-nvme-4c8g&quot; --provider BookMyHost --no-prompt
+python3 report.py results/&lt;run-dir&gt;/</pre>
+<footer>Generated by bmh-nvme-bench report.py at 2026-10-25T20:52:29+0530 IST. Maintained by BookMyHost engineering; published results at <a href='https://bookmyhost.com/blog'>bookmyhost.com/blog</a>.</footer></body></html>

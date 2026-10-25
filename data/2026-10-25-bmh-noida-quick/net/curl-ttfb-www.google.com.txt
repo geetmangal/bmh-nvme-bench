@@ -1,0 +1,5 @@
+https://www.google.com/ ttfb=0.180998 connect=0.009651 tls=0.034185 http=200
+https://www.google.com/ ttfb=0.192002 connect=0.003774 tls=0.027775 http=200
+https://www.google.com/ ttfb=0.183969 connect=0.004142 tls=0.028041 http=200
+https://www.google.com/ ttfb=0.169357 connect=0.005926 tls=0.030038 http=200
+https://www.google.com/ ttfb=0.181933 connect=0.006639 tls=0.031243 http=200

@@ -1,0 +1,23 @@
+fio --output-format=json /home/bench/bmh-nvme-bench/fio/prefill.fio
+env RW=randread BS=4k IODEPTH=1 NUMJOBS=1 JOBNAME=4k-randread-qd1 fio --output-format=json /home/bench/bmh-nvme-bench/fio/rand.fio
+env RW=randread BS=4k IODEPTH=32 NUMJOBS=1 JOBNAME=4k-randread-qd32 fio --output-format=json /home/bench/bmh-nvme-bench/fio/rand.fio
+env RW=randwrite BS=4k IODEPTH=1 NUMJOBS=1 JOBNAME=4k-randwrite-qd1 fio --output-format=json /home/bench/bmh-nvme-bench/fio/rand.fio
+env RW=randwrite BS=4k IODEPTH=32 NUMJOBS=1 JOBNAME=4k-randwrite-qd32 fio --output-format=json /home/bench/bmh-nvme-bench/fio/rand.fio
+env RWMIXREAD=70 RW=randrw BS=4k IODEPTH=32 NUMJOBS=1 JOBNAME=4k-randrw70-qd32 fio --output-format=json /home/bench/bmh-nvme-bench/fio/mixed.fio
+env RW=read BS=64k IODEPTH=8 NUMJOBS=1 JOBNAME=64k-seqread fio --output-format=json /home/bench/bmh-nvme-bench/fio/seq.fio
+env RW=write BS=64k IODEPTH=8 NUMJOBS=1 JOBNAME=64k-seqwrite fio --output-format=json /home/bench/bmh-nvme-bench/fio/seq.fio
+env RW=read BS=1M IODEPTH=8 NUMJOBS=1 JOBNAME=1m-seqread fio --output-format=json /home/bench/bmh-nvme-bench/fio/seq.fio
+env RW=write BS=1M IODEPTH=8 NUMJOBS=1 JOBNAME=1m-seqwrite fio --output-format=json /home/bench/bmh-nvme-bench/fio/seq.fio
+env RW=randread BS=4k IODEPTH=1 NUMJOBS=1 JOBNAME=4k-randread-lat-qd1 fio --output-format=json /home/bench/bmh-nvme-bench/fio/latency.fio
+env RW=write BS=4k IODEPTH=1 NUMJOBS=1 JOBNAME=4k-fsync-write fio --output-format=json /home/bench/bmh-nvme-bench/fio/fsync.fio
+sysbench cpu --cpu-max-prime=20000 --threads=1 --time=5 run
+sysbench cpu --cpu-max-prime=20000 --threads=4 --time=5 run
+sysbench memory --memory-block-size=1M --memory-total-size=20G --memory-oper=read --threads=1 --time=5 run
+sysbench memory --memory-block-size=1M --memory-total-size=20G --memory-oper=write --threads=1 --time=5 run
+openssl speed -evp aes-256-gcm -seconds 3
+python3 -c import time; t=time.perf_counter(); s=0
+for i in range(10_000_000): s+=i*i%7
+d=time.perf_counter()-t; print(f"pyloop_seconds={d:.3f} score={10_000_000/d/1e6:.2f} Mops/s")
+ping -c 20 -i 0.2 1.1.1.1
+bash -c for i in 1 2 3 4 5; do curl -o /dev/null -s -w "%{url_effective} ttfb=%{time_starttransfer} connect=%{time_connect} tls=%{time_appconnect} http=%{http_code}\n" --max-time 15 "$1"; done _ https://bookmyhost.com
+bash -c for i in 1 2 3 4 5; do curl -o /dev/null -s -w "%{url_effective} ttfb=%{time_starttransfer} connect=%{time_connect} tls=%{time_appconnect} http=%{http_code}\n" --max-time 15 "$1"; done _ https://www.google.com
