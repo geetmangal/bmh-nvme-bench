@@ -3,9 +3,9 @@
   "connected": [
    {
     "socket": 5,
-    "local_host": "10.12.200.41",
+    "local_host": "192.0.2.41",
     "local_port": 51234,
-    "remote_host": "10.12.200.9",
+    "remote_host": "192.0.2.9",
     "remote_port": 5201
    }
   ],
@@ -16,7 +16,7 @@
    "timesecs": 1792314723
   },
   "connecting_to": {
-   "host": "10.12.200.9",
+   "host": "192.0.2.9",
    "port": 5201
   },
   "test_start": {

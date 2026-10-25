@@ -149,7 +149,7 @@ def write_run(dirpath, spec, scale=None):
     run = {"bench_version": "0.1.0", "profile": "standard", "label": spec["label"], "provider": spec["provider"], "plan_price_inr": spec["price"], "size": "4G", "runtime_s": 60,
            "target": "/root/bench-tmp", "repeats": 1, "numjobs_rand": 4, "numjobs_seq": 2, "qd_seq": 16, "probe_secs": 60,
            "started_ist": "2026-10-25T14:30:00+0530", "started_utc": "2026-10-25T09:00:00Z", "finished_ist": "2026-10-25T14:58:12+0530", "finished_utc": "2026-10-25T09:28:12Z",
-           "hostname": spec["hostname"], "skip": [], "iperf_server": "10.12.200.9", "dry_run": False,
+           "hostname": spec["hostname"], "skip": [], "iperf_server": "192.0.2.9", "dry_run": False,
            "tools": {"fio": "fio-3.36", "sysbench": "sysbench 1.0.20", "iperf3": "iperf 3.16"}}
     json.dump(run, open(os.path.join(dirpath, "run.json"), "w"), indent=2)
 

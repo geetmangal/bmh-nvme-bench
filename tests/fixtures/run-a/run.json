@@ -18,7 +18,7 @@
   "finished_utc": "2026-10-25T09:28:12Z",
   "hostname": "bmh-noida-vm-4c8g",
   "skip": [],
-  "iperf_server": "10.12.200.9",
+  "iperf_server": "192.0.2.9",
   "dry_run": false,
   "tools": {
     "fio": "fio-3.36",
